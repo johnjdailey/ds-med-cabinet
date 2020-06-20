@@ -27,9 +27,10 @@ Leafly data from Kaggle
 Leafly data wrangled with no list and commas in effects column
 
 
-# leafly_csv_wrangle.py
+# Leafly_csv_wrangle.py
 
 First wrangle on the Leafly "Leafly.csv" data to discover 13 useful unique "effects" values for Front End user survey for relaying user input via app/API to the final pickled ML model for predictions, which are to be POSTed and stored in the BE PG DB.
+
 Second wrangle is to strip "[]"" from list of Effects in Effects column values and replace "," with " " while also turning the list into a pandas.core.series in attempt for better neural networking fit. Output as Leafly_nolistcommas.csv
 
 # processing_data.ipynb
