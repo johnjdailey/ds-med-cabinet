@@ -21,6 +21,11 @@ app = Flask(__name__)
 api = Api(app)
 
 
+@app.route('/')
+def hello():
+    print("Hello world")
+
+
 @app.route('/predict', methods=['GET', 'PUT'])
 def get_predict_post():
 
