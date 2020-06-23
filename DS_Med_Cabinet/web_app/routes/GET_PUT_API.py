@@ -31,8 +31,10 @@ def index():
     return ("Welcome to the DS-Med-Cabinet API")
 
 
+# GET_PUT_API get_predict_put
+
 @GET_PUT_API.route('/predict', methods=['GET', 'PUT'])
-def get_predict_post():
+def get_predict_put():
 
     # GET JSON User Data
 

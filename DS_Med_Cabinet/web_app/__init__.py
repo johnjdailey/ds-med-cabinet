@@ -14,6 +14,8 @@ def create_app():
     
     app = Flask(__name__)
 
+    my_app = create_app()
+
     app.register_blueprint(GET_PUT_API)
 
     return app
