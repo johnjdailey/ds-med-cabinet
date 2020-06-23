@@ -1,1 +1,1 @@
-web: gunicorn "web_app:create_app()"
+web: PYTHONPATH=`pwd`/.. gunicorn "web_app:create_app()"
