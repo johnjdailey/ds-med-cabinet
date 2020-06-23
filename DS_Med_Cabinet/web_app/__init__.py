@@ -2,9 +2,13 @@
 
 
 
+# Imports
+
 from flask import Flask
 from web_app.routes.GET_PUT_API import GET_PUT_API
 
+
+# Create Flask app
 
 def create_app():
     
