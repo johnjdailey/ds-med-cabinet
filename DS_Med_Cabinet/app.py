@@ -11,14 +11,21 @@
 import pandas as pd
 import requests
 from flask import Flask, Blueprint, json, request, jsonify
-from flask_restful import Api
+#from flask_restful import Api
 from Recommend import recommend
 
 
 # Flask API
 
 app = Flask(__name__)
-api = Api(app)
+#api = Api(app)
+
+
+# A welcome message to app
+
+@app.route('/')
+def index():
+    return "Welcome to the DS-Med-Cabinet API"
 
 
 @app.route('/predict', methods=['GET', 'PUT'])
@@ -83,5 +90,5 @@ def get_predict_post():
 # Run API
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    #app.run()
+    #app.run(debug=True)
+    app.run()
