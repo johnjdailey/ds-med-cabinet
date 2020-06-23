@@ -12,6 +12,7 @@ pickle-mixin = "*"
 Flask = "*"
 Flask-RESTful = "*"
 pipenv = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

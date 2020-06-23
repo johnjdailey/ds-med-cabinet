@@ -55,7 +55,7 @@ def recommend(user_input):
         flavor = json.dumps(info_flavor)
         description = json.dumps(info_description)
 
-        print(strain)
+        #print(strain)
         #print(typ)
         #print(rating)
         #print(effects)
