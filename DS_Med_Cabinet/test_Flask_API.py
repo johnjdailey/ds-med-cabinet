@@ -2,7 +2,7 @@
 
 # This is the test version of the API, it can both GET JSON and POST data 
 
-# The NLP model is imported as recommend function, run the model, and test sending results
+# The NLP model is imported as the recommend function. Run the model, and test sending results
 
 
 
@@ -83,5 +83,5 @@ def get_predict_post():
 # Run API
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+    #app.run()
