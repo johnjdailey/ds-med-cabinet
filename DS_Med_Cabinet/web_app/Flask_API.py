@@ -15,7 +15,7 @@ from flask_restful import Api
 from Recommend import recommend
 
 
-GET_PUT_API = Blueprint("GET_PUT_API", __name__)
+Flask_API = Blueprint("Flask_API", __name__)
 
 
 ## Flask API
