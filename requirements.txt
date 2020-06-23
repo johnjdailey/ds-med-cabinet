@@ -1,0 +1,6 @@
+pandas
+json
+requests
+flask
+flask_restful
+pickle-mixin

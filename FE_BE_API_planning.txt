@@ -1,0 +1,77 @@
+Here are the 13/14 unique Effects from the Leafly data that will be added to the front end as check boxes as a sort of survey for desired effects of users.
+
+Dry Mouth (not sure we want to include this one)
+Euphoric
+Happy
+Relaxed
+Focused
+Energetic
+Sleepy
+Talkative
+Tingly
+Aroused
+Giggly
+Creative
+Hungry
+Uplifted
+
+Still think check boxes are a good idea, and hoping to get that data in a JSON object with First Name, Last name, and effects. Something like this (FOR TESTING AND MVP):
+
+Ps. None of this is sacred, its in design considerations by DS, almost there, but this is primarily an effort to get FE, DS, and BE aligned and connect the dots, ie: we can meet in the middle with variables names.
+
+GET: (names are optional, it's what we started with, but if using just "id" works, then great, and we can go with "id" in the name of user privacy)
+
+MOCK_DATA = {"id": 420, 
+            "First Name": "John", 
+            "Last Name": "Doe", 
+            "Desired_Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, 
+            Giggly"}
+
+PARAMS = {"id": id, 
+          "First Name": first_name, 
+          "Last Name": last_name, 
+          "Desired_Effects": desired_effects}
+
+ROUTE= "/predict"
+This route is for both GET  (GET requests json from Front End Survey)
+
+@app.route('/predict', methods=['GET', 'PUT'])
+
+PUT: (names are optional, it's what we started with, but if using just "id" works, then great, and we can go with "id" in the name of user privacy)
+
+MOCK DATA = {"id": 420,
+             "First Name": 'John',
+             "Last_Name": "Doe",
+             "Desired_Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, Giggly",
+             "Recommendation": "Pineapple-Super-Silver-Haze",
+             "Recommendation_Effects": "Happy,Euphoric,Energetic,Focused,Tingly"}
+
+PARAMS = {"id": id,
+          "First Name": first_name,
+          "Last_Name": last_name,
+          "Desired_Effects": desired_effects,
+          "Recommendation": recommended_strain,
+          "Recommendation_Effects": recommended_strain_effects}
+
+The above is as of Sunday 3 pm Lambda time /\
+
+The following could also be PUT final results, if we want to get all of the data for the recommendation stored in the DB and returned to the user:
+
+PARAMS = {"id": id,
+          "First Name": first_name,
+          "Last_Name": last_name,
+          "Desired_Effects": desired_effects,
+          "Recommendation_Strain": recommended_strain,
+          "Recommendation_Type": recommended_strain,
+          "Recommendation_Rating": recommended_rating,
+          "Recommendation_Effects": recommended_strain_effects,
+          "Recommendation_Flavor": recommended_flavor,
+          "Recommendation_Description": recommended_description}
+
+For MVP, the plan is to recommend and PUT one Strain and its Effects. (It's also possible to PUT the recommended Strain Flavors, Description, etc. but trying to keep it simple for testing, then stretch with time. It may also be possible to PUT numerous Strain recommendations with all of these features, if all goes well, BE and DS agree to make this happen, and time permits)
+
+The DS ML engineer was also curious about FE surveying the users of preferred Flavors, and having a text input box so users can enter their general desires, ie: "I just want to get really stoned". Apparently the NLP model can take all of these inputs. However, this is only an effort in communication with FE and BE Web as a sort of weather test to find out how we are all doing, and this should also be considered a stretch goal. We don't want to stress with more workload and have possibility of not finishing, just FYI.
+
+---
+
+Hoping to have tested something like this by Tuesday if feasible with Front End, and Back End.
