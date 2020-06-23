@@ -1,4 +1,4 @@
-# test_Flask_API.py
+# GET_PUT_API.py
 
 # This is the test version of the API, it can both GET JSON and POST data 
 
@@ -12,12 +12,12 @@ import pandas as pd
 import requests
 from flask import Flask, Blueprint, json, request, jsonify
 #from flask_restful import Api
-from Recommend import recommend
+from web_app.Recommend import recommend
 
 
 # Flask API
 
-app = Flask(__name__)
+#app = Flask(__name__)
 #api = Api(app)
 
 
@@ -89,6 +89,6 @@ def get_predict_post():
 
 # Run API
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #app.run(debug=True)
-    app.run()
+    #app.run()
