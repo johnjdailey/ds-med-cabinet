@@ -15,6 +15,9 @@ from flask import Flask, Blueprint, json, request, jsonify
 from web_app.Recommend import recommend
 
 
+GET_PUT_API = Blueprint("GET_PUT_API", __name__)
+
+
 # Flask API
 
 #app = Flask(__name__)
@@ -23,12 +26,12 @@ from web_app.Recommend import recommend
 
 # A welcome message to app
 
-@app.route('/')
+@GET_PUT_API.route('/')
 def index():
     return "Welcome to the DS-Med-Cabinet API"
 
 
-@app.route('/predict', methods=['GET', 'PUT'])
+@GET_PUT_API.route('/predict', methods=['GET', 'PUT'])
 def get_predict_post():
 
     # GET JSON User Data

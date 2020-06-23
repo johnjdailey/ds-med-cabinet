@@ -2,8 +2,6 @@
 
 
 
-import os
-from dotenv import load_dotenv
 from flask import Flask
 from web_app.routes.GET_PUT_API import GET_PUT_API
 
