@@ -3,14 +3,14 @@
 
 
 from flask import Flask
-from API import API
+from Flask_API import GET_PUT_API
 
 
 def create_app():
     
     app = Flask(__name__)
     
-    app.register_blueprint(API)
+    app.register_blueprint(GET_PUT_API)
 
     return app
 
