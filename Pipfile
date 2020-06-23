@@ -7,11 +7,11 @@ verify_ssl = true
 
 [packages]
 pandas = "*"
-json = "*"
 requests = "*"
 pickle-mixin = "*"
 Flask = "*"
 Flask-RESTful = "*"
+pipenv = "*"
 
 [requires]
 python_version = "3.7"
