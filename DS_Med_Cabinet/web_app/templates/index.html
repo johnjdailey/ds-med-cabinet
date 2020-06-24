@@ -1,0 +1,42 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "index" %}
+
+{% block content %}
+
+<br>
+<br>
+
+
+    <h1>DS Med Cabinet API Cannabis Strain Recommender</h1>
+
+    <p>{{ message }}</p>
+
+    <br>
+
+    <h4>DS Med Cabinet API Address</h4>
+
+    <a href="https://ds-med-cabinet.herokuapp.com/" style="color:#008000"> DS Med Cabinet API</a>
+
+    <br>
+    <br>
+       
+    <h4>API Usage</h4>
+
+    <p>Send a <b>POST or PUT request</b> to <b>https://ds-med-cabinet.herokuapp.com/predict</b> with a json object structured like so:</p>
+
+    </p>
+    <div class="highlight highlight-source-python">
+        <pre>
+        {
+        <span class="pl-s">"id"</span>: <span class="pl-s">"420"</span>, 
+        <span class="pl-s">"First Name"</span>: <span class="pl-s">"John"</span>, 
+        <span class="pl-s">"Last Name"</span>: <span class="pl-s">"Doe"</span>,
+        <span class="pl-s">"Desired Effects"</span>: <span class="pl-s">"Uplifed, Happy, Relaxed, Energetic, Creative"</span>
+        }</pre>
+    </div>
+    <p>
+        The API response will PUT a JSON object with recommended Strain and Effects to the Med Cabinet Database where it can be retrieved by Med Cabinet members.
+    </p>
+
+
+{% endblock %}

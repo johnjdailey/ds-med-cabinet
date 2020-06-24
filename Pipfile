@@ -10,8 +10,6 @@ pandas = "*"
 requests = "*"
 pickle-mixin = "*"
 Flask = "*"
-Flask-RESTful = "*"
-pipenv = "*"
 gunicorn = "*"
 
 [requires]

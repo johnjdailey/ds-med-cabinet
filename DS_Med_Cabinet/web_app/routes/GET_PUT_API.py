@@ -11,7 +11,7 @@
 import pandas as pd
 import requests
 import json
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from web_app.Recommend import recommend
 
 
@@ -28,7 +28,7 @@ GET_PUT_API = Blueprint("GET_PUT_API", __name__)
 
 @GET_PUT_API.route('/')
 def index():
-    return ("Welcome to the DS-Med-Cabinet API")
+    return render_template("index.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
 
 
 # GET_PUT_API get_predict_put

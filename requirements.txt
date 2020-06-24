@@ -1,6 +1,5 @@
 pandas
 requests
 flask
-flask_restful
 pickle-mixin
 gunicorn

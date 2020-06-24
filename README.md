@@ -1,23 +1,31 @@
-# Data Science ML and DE
+# DS Med Cabinet API
 
-# Med Cabinet API
+An API that receives user inputs as a json object, uses a natural language processing model to recommend the best cannabis strain based on desired user effects, and returns a recommendation as a json object.
 
-This API accepts GET requests like so:
+# API URL
 
-MOCK_DATA = {"id": 420, 
+https://ds-med-cabinet.herokuapp.com/predict
+
+This API accepts POST and PUT requests like so:
+
+```
+MOCK DATA = {"id": 420, 
             "First Name": "John", 
             "Last Name": "Doe", 
-            "Desired_Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, 
+            "Desired Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, 
             Giggly"}
+```
 
-and then uses the desired effects to predict the best cannabis strain using natural language processing, machine learning. The results are then sent via the API PUT as so:
+and then uses the desired effects to predict the best cannabis strain using natural language processing, machine learning. The results are then sent to the DB via the API PUT as so:
 
+```
 MOCK DATA = {"id": 420,
              "First Name": 'John',
-             "Last_Name": "Doe",
-             "Desired_Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, Giggly",
+             "Last Name": "Doe",
+             "Desired Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, Giggly",
              "Recommendation": "Pineapple-Super-Silver-Haze",
-             "Recommendation_Effects": "Happy,Euphoric,Energetic,Focused,Tingly"}
+             "Recommendation Effects": "Happy,Euphoric,Energetic,Focused,Tingly"}
+```
 
 The API can also PUT more data pertaining to the recommendation including type, rating, flavor, description, and this is the MVP.
 
