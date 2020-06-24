@@ -13,21 +13,21 @@ import json
 
 # Import Leafly csv
 
-file_name = path.join(path.dirname(__file__), "../DS_Med_Cabinet/data/Leafly.csv")
+file_name = path.join(path.dirname(__file__), "../data/Leafly.csv")
 
 df = pd.read_csv(file_name)
 
 
 # Import pickled model
 
-model_path = path.join(path.dirname(__file__), "../DS_Med_Cabinet/pickles/nn.pkl")
+model_path = path.join(path.dirname(__file__), "../pickles/nn.pkl")
 
 NN_model = pickle.load(open(model_path, 'rb'))
 
 
 # Import pickled vectorizer
 
-vectorizer_path = path.join(path.dirname(__file__), "../DS_Med_Cabinet/pickles/tfidf.pkl")
+vectorizer_path = path.join(path.dirname(__file__), "../pickles/tfidf.pkl")
 
 tfidf = pickle.load(open(vectorizer_path, 'rb'))
 
