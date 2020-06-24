@@ -5,7 +5,7 @@
 # Imports
 
 from flask import Flask
-from routes.GET_PUT_API import GET_PUT_API
+from web_app.routes.GET_PUT_API import GET_PUT_API
 
 
 # Create Flask app
