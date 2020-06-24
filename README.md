@@ -61,3 +61,6 @@ Where the data, pickles, and recommend function come together to make NLP predic
 # Flask API
 
 GET user input data for making predictions, and PUT results and recommendations to the database.
+
+web: gunicorn --workers=1
+GET_PUT_API: python - web_app.routes.GET_PUT_API
