@@ -2,7 +2,7 @@
 
 # This is the test version of the API, it can both GET and POST JSON data 
 
-# An NLP model is imported as the recommend function. Recommend strains and sends results
+# An NLP model is imported as the recommend function, recommends strains and sends results
 
 
 
@@ -15,25 +15,20 @@ from flask import Blueprint, request, jsonify, render_template
 from web_app.Recommend import recommend
 
 
+# Make Blueprint for __init__.py
+
 GET_PUT_API = Blueprint("GET_PUT_API", __name__)
 
 
-# Flask API
+# GET_PUT_API template
 
-#app = Flask(__name__)
-#api = Api(app)
-
-
-# A welcome message to app
-
-@GET_PUT_API.route('/')
-def index():
-    return render_template("index.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
+@GET_PUT_API.route('/predict', methods=['GET', 'PUT'])
+def template():
+    return render_template("predict.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
 
 
 # GET_PUT_API get_predict_put
 
-@GET_PUT_API.route('/predict', methods=['GET', 'PUT'])
 def get_predict_put():
 
     # GET JSON User Data
@@ -80,11 +75,4 @@ def get_predict_put():
 
 
     else:
-        return ("Ok, waiting.")
-
-
-# Run API
-
-#if __name__ == '__main__':
-    #app.run(debug=True)
-    #app.run()
+        return ("OK, waiting.")

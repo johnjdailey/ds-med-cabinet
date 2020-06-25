@@ -30,8 +30,10 @@
     <!-- see: https://jinja.palletsprojects.com/en/2.11.x/tricks/ -->
     <!-- see: https://getbootstrap.com/docs/4.0/components/navbar/ -->
     {% set nav_links = [
-      ('/', 'index', 'Home'),
-      ('/predict', 'GET_PUT_API', 'API')
+      ('/', 'Directory', 'Home'),
+      ('/predict', 'GET_PUT_API', 'API'),
+      ('/strainjson', 'Directory', 'JSON'),
+      ('/straintable', 'Directory', "Strain Table")
     ] -%}
     {% set active_page = active_page|default('index') -%}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
