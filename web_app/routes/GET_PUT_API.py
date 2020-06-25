@@ -42,8 +42,8 @@ def get_predict_put():
         # Extracting id, first name, last name, and effects from the json get_data
     
         user_id = get_data["id"] 
-        first_name = get_data["First Name"]
-        last_name = get_data["Last Name"]
+        #first_name = get_data["First Name"]
+        #last_name = get_data["Last Name"]
         effects = get_data["Effects"]
         
         # Make recommendation
@@ -62,8 +62,8 @@ def get_predict_put():
        # User Data to be sent to backend API
 
         post_data = {"id": user_id,
-                    "First Name": first_name, 
-                    "Last Name": last_name,
+                    #"First Name": first_name, 
+                    #"Last Name": last_name,
                     "Desired_Effects": effects, 
                     "Reccommendation": results}
 
