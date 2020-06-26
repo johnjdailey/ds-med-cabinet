@@ -23,8 +23,8 @@ GET_PUT_API = Blueprint("GET_PUT_API", __name__)
 # GET_PUT_API template
 
 @GET_PUT_API.route('/predict', methods=['GET', 'PUT'])
-def template():
-    return render_template("predict.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
+#def template():
+#    return render_template("predict.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
 
 
 # GET_PUT_API get_predict_put
