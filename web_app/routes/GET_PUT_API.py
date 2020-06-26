@@ -33,7 +33,7 @@ def get_predict_put():
 
     # GET JSON User Data
 
-    if request.method=='GET':
+    if request.method=='POST':
         
         # Request .json from Web
 
