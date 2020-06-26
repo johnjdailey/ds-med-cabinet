@@ -1,6 +1,6 @@
-# GET_PUT_API.py
+# POST_PUT_API.py
 
-# This is the test version of the API, it can both GET and POST JSON data 
+# This is the test version of the API, it can both POST and PUT JSON data 
 
 # An NLP model is imported as the recommend function, recommends strains and sends results
 
@@ -17,34 +17,34 @@ from web_app.Recommend import recommend
 
 # Make Blueprint for __init__.py
 
-GET_PUT_API = Blueprint("POST_PUT_API", __name__)
+API = Blueprint("API", __name__)
 
 
-# GET_PUT_API template
+# POST_PUT_API template
 
-@GET_PUT_API.route('/predict', methods=['POST', 'PUT'])
+@API.route('/predict', methods=['POST', 'PUT'])
 #def template():
 #    return render_template("predict.html", message = "DS Med Cabinet API using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
 
 
-# GET_PUT_API get_predict_put
+# POST_PUT_API post_predict_put
 
-def get_predict_put():
+def post_predict_put():
 
-    # GET JSON User Data
+    # POST JSON User Data
 
     if request.method=='POST':
         
         # Request .json from Web
 
-        get_data = request.json
+        post_data = request.json
         
-        # Extracting id, first name, last name, and effects from the json get_data
+        # Extracting id, first name, last name, and effects from the json post_data
     
-        user_id = get_data["id"] 
-        #first_name = get_data["First Name"]
-        #last_name = get_data["Last Name"]
-        effects = get_data["Effects"]
+        user_id = post_data["id"] 
+        #first_name = post_data["First Name"]
+        #last_name = post_data["Last Name"]
+        effects = post_data["Effects"]
         
         # Make recommendation
 
@@ -61,18 +61,19 @@ def get_predict_put():
 
        # User Data to be sent to backend API
 
-        post_data = {"id": user_id,
+        put_data = {"id": 420, #user_id,
                     #"First Name": first_name, 
                     #"Last Name": last_name,
-                    "Desired_Effects": effects, 
-                    "Reccommendation": results}
+                    "Desired_Effects": "Happy,Relaxed,Uplifted,Focused,Aroused", #effects, 
+                    "Reccommendation": "Captain-America-Og"} #results}
 
         # Recommendation
 
-        reccommendation = json.dumps(post_data) #(post_data, indent=2, separators=(', ', ': '))
+        reccommendation = put_data #(put_data, indent=2, separators=(', ', ': '))
         
-        return reccommendation
+        return jsonify(reccommendation)
 
 
     else:
-        return ("OK, waiting.")
+
+        return ("OK, waiting")
