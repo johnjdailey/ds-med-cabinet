@@ -1,0 +1,26 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "Strain Menu" %}
+
+{% block content %}
+<div class="p-3 mb-2 bg-dark text-success bg-dark">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS Med Cabinet Strain Menu</title>
+    </head>
+    <body>
+        <h1>DS Med Cabinet Strain Menu</h1>
+        <br>
+        {% for strain in strains %}
+        <h2>{{ strain.strain }}</h2>
+        <p>Type of strain: {{ strain.type }}</p>
+        <p>Current Rating: {{ strain.rating }}</p>
+        <p>Known Effects: {{ strain.effects }}</p>
+        <p>Known Flavor Profile: {{ strain.flavor }}</p>
+        <p>Description: {{ strain.description }}</p>
+        {% endfor %}    
+    </body>
+</html>
+
+{% endblock %}

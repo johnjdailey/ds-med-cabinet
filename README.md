@@ -9,9 +9,7 @@ https://ds-med-cabinet.herokuapp.com/predict
 This API accepts POST and PUT requests like so:
 
 ```
-MOCK DATA = {"id": 420, 
-            "First Name": "John", 
-            "Last Name": "Doe", 
+MOCK DATA = {"id": 420,
             "Desired Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, 
             Giggly"}
 ```
@@ -21,10 +19,7 @@ and then uses the desired effects to predict the best cannabis strain using natu
 ```
 MOCK DATA = {"id": 420,
              "First Name": 'John',
-             "Last Name": "Doe",
-             "Desired Effects": "Creative,Uplifted,Tingly,Euphoric,Relaxed, Giggly",
-             "Recommendation": "Pineapple-Super-Silver-Haze",
-             "Recommendation Effects": "Happy,Euphoric,Energetic,Focused,Tingly"}
+             "Recommendation": "Pineapple-Super-Silver-Haze"}
 ```
 
 The API can also PUT more data pertaining to the recommendation including type, rating, flavor, description, and this is the MVP.

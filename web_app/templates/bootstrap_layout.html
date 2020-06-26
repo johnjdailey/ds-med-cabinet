@@ -4,7 +4,7 @@
 <html>
   <head>
     {% block title %}
-      <title>DS MedCabinet API App | GET and PUT API to recommend cannabis strains based on desired effects.</title>
+      <title>DS MedCabinet API App | POST and PUT API to recommend cannabis strains based on desired effects.</title>
     {% endblock %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -30,10 +30,14 @@
     <!-- see: https://jinja.palletsprojects.com/en/2.11.x/tricks/ -->
     <!-- see: https://getbootstrap.com/docs/4.0/components/navbar/ -->
     {% set nav_links = [
-      ('/', 'Directory', 'Home'),
-      ('/predict', 'GET_PUT_API', 'API'),
-      ('/strainjson', 'Directory', 'Strain JSON'),
-      ('/straintable', 'Directory', "Strain Table")
+      ('/', 'Directory', 'Documentation'),
+      ('/predict', 'API', 'Recommendation API'),
+      ('/request', 'ParseURL', 'Request API'),
+      ('/strainjson', 'Directory', 'Strain JSON API'),
+      ('/<strain>', 'ParseURL', 'Strain in URL API'),
+      ('/straintable', 'Directory', 'Strain Table'),
+      ('strainmenu', 'Directory', 'Strain Menu'),
+      ('/<strain>/strainmenu', 'ParseURL', 'Strain in URL Menu')
     ] -%}
     {% set active_page = active_page|default('index') -%}
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
