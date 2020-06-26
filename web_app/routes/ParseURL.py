@@ -24,7 +24,7 @@ file_name = path.join(path.dirname(__file__), "Leafly.csv")
 
 # Route to display dictionary list
 
-@ParseURL.route("/request", methods=['GET'])
+@ParseURL.route("/request", methods=['GET', 'POST'])
 def row():
     '''
     For loops the cannabis.csv file appending each row to a list.
@@ -52,7 +52,7 @@ def row():
 
 # Route to display single dictionary list item as JSON object
 
-@ParseURL.route('/<strain>', methods=['GET'])
+@ParseURL.route('/<strain>', methods=['GET', 'POST'])
 def strain_url(strain):
     '''
     Parameters: name of strain from database as a string.
@@ -78,7 +78,7 @@ def strain_url(strain):
 
 # Route to display single dictionary list item via template
 
-@ParseURL.route("/<strain>/strainmenu", methods=['GET'])
+@ParseURL.route("/<strain>/strainmenu", methods=['GET', 'POST'])
 def pretty_url(strain):
     '''
     Parameters: name of strain from database as a string.
