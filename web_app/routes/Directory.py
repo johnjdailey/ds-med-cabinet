@@ -7,7 +7,8 @@
 from os import path
 import csv
 import pandas as pd
-from flask import Blueprint, render_template
+from flask import Blueprint, request, render_template
+from web_app.Recommend import recommend
 
 
 # Make Blueprint for __init__.py
@@ -71,3 +72,30 @@ def strainmenu():
             else:
                 first_line = False
     return render_template("strainmenu.html", strains=strains)
+
+
+# When the user visits the reccommendation page
+
+@Directory.route("/recommendations")
+def recommendations():
+    #print("Recommendations!")
+
+    return render_template("prediction_form.html")
+
+
+# Makes local recommendations in app for visitors
+
+@Directory.route("/recommendation", methods=["POST"])
+def predict():
+    print("RECOMMENDATION ROUTE...")
+    print("FORM DATA:", dict(request.form))
+    
+    desired_effects = request.form["desired_effects"]
+    print(desired_effects)
+
+    results = recommend(desired_effects)
+
+    return render_template("prediction_results.html",
+    desired_effects=desired_effects,
+    recommendation= results #[0]
+    )

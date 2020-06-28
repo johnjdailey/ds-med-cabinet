@@ -1,0 +1,30 @@
+<!-- web_app/templates/predict_form.html -->
+
+<!-- CHALLENGE / TODO: Checkboxes for effects and input for description https://getbootstrap.com/docs/4.0/components/forms/#default-stacked -->
+
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "prediction_form" %}
+
+{% block content %}
+    <h2>DS Med Cabinet Strain Recommendations</h2>
+    <br>
+    <p>Use the form below to enter your preferred effects and you will receive a strain recommendation.</p>
+    <br>
+    <p>For best results, choose and enter your preferred effects from this list of effects:</p><br>
+    <div class="p-3 mb-2 bg-dark text-success bg-dark">
+    <p>Euphoric, Happy, Relaxed, Focused, Energetic, Sleepy, Talkative, Tingly, Aroused, Giggly, Creative, Hungry, Uplifted.</p><br>
+    <br>
+    <form action="/recommendation" method="POST">
+
+    <!-- TODO: Make checkboxes for all effects, and use this text input for general description. -->
+        <h4>Desired Effects for Strain Recommendation:</h4>
+        <br>
+        <br>
+        <label>Desired Effects: </label>
+        <input type="text" name="desired_effects" placeholder="eg: Happy, Focused, Creative, Uplifted" value="Happy, Focused, Creative, Uplifted">
+        <br>
+        <br>
+        <br>
+        <button>Submit</button>
+    </form>
+{% endblock %}

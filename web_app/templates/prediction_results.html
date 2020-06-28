@@ -1,0 +1,16 @@
+<!-- web_app/templates/prediction_results.html -->
+
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "prediction_results" %}
+
+<!-- Pulls information from the results of the /recommendation Directory route and outputs a message for the user to read -->
+{% block content %}
+    <h2>DS Med Cabinet Strain Recommendation</h2>
+    <br>
+    <p>Your desired effects entered were, "{{ desired_effects }}" and your recommendation is:</p>
+    <br>
+    <div class="p-3 mb-2 bg-dark text-success bg-dark">
+    <h3>{{ recommendation }}</h3>
+    <br>
+    <br>
+{% endblock %}

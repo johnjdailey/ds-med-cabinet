@@ -32,8 +32,14 @@
         <span class="pl-s">"Desired Effects"</span>: <span class="pl-s">"Uplifed, Happy, Relaxed, Energetic, Creative"</span>
         }</pre>
     </div>
+    </div>
     <p>The API response will PUT a JSON object with recommended Strain and Effects to the Med Cabinet Database where it can be stored and retrieved by Med Cabinet members via Front End Web services. 
-        The Reccomendation API is currently for Private Use Only, while a local version is also in development.</p>
+    <br>
+    <br>   
+       There is also a local strain recommendation service page with GUI located in the navigation bar or also available at this link: 
+    <br>
+    <br>
+       <a href="https://ds-med-cabinet.herokuapp.com/recommendations" class="text-success">https://ds-med-cabinet.herokuapp.com/recommendations</a> </p>
 
     <br>
 
@@ -45,13 +51,13 @@
     
     <h4>Data API Usage</h4>
 
-    <p>Also try to Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/data" class="text-success">https://ds-med-cabinet.herokuapp.com/data</a> to request all of the Med Cabinet API Data. This page has a GUI, so you prefer the above mentioned API request</p>
+    <p>Also try to Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/data" class="text-success">https://ds-med-cabinet.herokuapp.com/data</a> to request all of the Med Cabinet API Data. This page has a GUI, so you may prefer the above mentioned API request</p>
     
     <br>
     
     <h4>Strain in URL API Usage</h4>
 
-    <p>Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/<strain>" class="text-success">https://ds-med-cabinet.herokuapp.com/<strain></a> and replace "strain" with a strain name to request data for that specific strain. Strain names can be found in the previous two API's that are mentioned or also in the Strain Table and Strain Menu</p>
+    <p>Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/strain" class="text-success">https://ds-med-cabinet.herokuapp.com/<strain></a> and replace "strain" with a strain name to request data for that specific strain. Strain names can be found in the previous two API's that are mentioned or also in the Strain Table and Strain Menu</p>
     
     <br>
 
@@ -63,8 +69,8 @@
 
     <h4>Strain in URL Menu</h4>
 
-    <p> This page also found in the Navbar is not an API yet it includes functionality to search for a strain the URL.</p>
+    <p> This page is also found in the Navbar and is not an API, yet it includes functionality to search for a strain using the URL.</p>
 
-
+    <br>
 
 {% endblock %}
