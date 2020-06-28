@@ -7,35 +7,64 @@
 <br>
 
 
-    <h1>DS Med Cabinet API Cannabis Strain Recommender Documentation Page</h1>
+    <h1>DS Med Cabinet Cannabis Strain Recommendation API Documentation</h1>
 
     <p>{{ message }}</p>
 
     <br>
 
-    <h4>DS Med Cabinet API Address</h4>
+    <h4>DS Med Cabinet Recommendation API URL Address</h4>
 
     <a href="https://ds-med-cabinet.herokuapp.com/predict" style="color:#008000"> https://ds-med-cabinet.herokuapp.com/predict</a>
 
     <br>
     <br>
        
-    <h4>API Usage</h4>
+    <h4>Recommendation API Usage</h4>
 
-    <p>Send a <b>POST or PUT request</b> to <a href="https://ds-med-cabinet.herokuapp.com/predict" class="text-success">https://ds-med-cabinet.herokuapp.com/predict</a> with a json object structured like so:</p>
+    <p>Send a <b>[POST] or [PUT] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/predict" class="text-success">https://ds-med-cabinet.herokuapp.com/predict</a> with a json object structured like so:</p>
 
     </p>
     <div class="p-3 mb-2 bg-dark text-success bg-dark">
-    <div class="highlight highlight-source-python">
-        <pre class="p-3 mb-2 bg-dark text-warning bg-dark">
+    <div class="highlight highlight-source-python"> <pre class="p-3 mb-2 bg-dark text-warning bg-dark">
         {
         <span class="pl-s">"id"</span>: <span class="pl-s">"420"</span>, 
         <span class="pl-s">"Desired Effects"</span>: <span class="pl-s">"Uplifed, Happy, Relaxed, Energetic, Creative"</span>
         }</pre>
     </div>
-    <p>
-        The API response will PUT a JSON object with recommended Strain and Effects to the Med Cabinet Database where it can be retrieved by Med Cabinet members.
-    </p>
+    <p>The API response will PUT a JSON object with recommended Strain and Effects to the Med Cabinet Database where it can be stored and retrieved by Med Cabinet members via Front End Web services. 
+        The Reccomendation API is currently for Private Use Only, while a local version is also in development.</p>
+
+    <br>
+
+    <h4>Request API Usage</h4>
+
+    <p>Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/request" class="text-success">https://ds-med-cabinet.herokuapp.com/request</a> to request all of the Med Cabinet API Data.</p>
+    
+    <br>
+    
+    <h4>Data API Usage</h4>
+
+    <p>Also try to Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/data" class="text-success">https://ds-med-cabinet.herokuapp.com/data</a> to request all of the Med Cabinet API Data. This page has a GUI, so you prefer the above mentioned API request</p>
+    
+    <br>
+    
+    <h4>Strain in URL API Usage</h4>
+
+    <p>Send a <b>[GET] request</b> to <a href="https://ds-med-cabinet.herokuapp.com/<strain>" class="text-success">https://ds-med-cabinet.herokuapp.com/<strain></a> and replace "strain" with a strain name to request data for that specific strain. Strain names can be found in the previous two API's that are mentioned or also in the Strain Table and Strain Menu</p>
+    
+    <br>
+
+    <h4>Strain Table and Strain Menu</h4>
+
+    <p>Although these two pages are not API's and this is an API first application, it is worth noting that these two pages were added for non technical users to explore the data by using the find functions on their respective operating systems. The GUI here is more user friendly and the links can be found in the top Navigation Bar.</p>
+
+    <br>
+
+    <h4>Strain in URL Menu</h4>
+
+    <p> This page also found in the Navbar is not an API yet it includes functionality to search for a strain the URL.</p>
+
 
 
 {% endblock %}

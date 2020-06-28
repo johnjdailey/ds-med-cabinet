@@ -8,6 +8,7 @@ https://medium.com/@kellylougheed/make-a-flask-app-with-a-csv-as-a-flat-file-dat
 
 
 from os import path
+import re
 import csv
 from flask import Flask, Blueprint, render_template, jsonify
 
@@ -25,13 +26,13 @@ file_name = path.join(path.dirname(__file__), "Leafly.csv")
 # Route to display dictionary list
 
 @ParseURL.route("/request", methods=['GET', 'POST'])
-def row():
+def request():
     '''
     For loops the cannabis.csv file appending each row to a list.
     Does not include the first line, since that is our headers in the csv file.
     Returning that list.
     '''
-    with open(file_name, encoding="utf8") as csv_file:
+    with open(file_name, encoding="utf-8") as csv_file:
         data = csv.reader(csv_file, delimiter=',')
         first_line = True
         strains = []
@@ -50,7 +51,7 @@ def row():
     return jsonify(strains)
 
 
-# Route to display single dictionary list item as JSON object
+# Routes to display single dictionary list item as JSON object
 
 @ParseURL.route('/<strain>', methods=['GET', 'POST'])
 def strain_url(strain):

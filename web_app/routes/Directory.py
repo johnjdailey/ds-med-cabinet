@@ -33,8 +33,8 @@ def index():
 
 # Strain JSON Page
 
-@Directory.route("/strainjson", methods=['GET'])
-def strainjson():
+@Directory.route("/data", methods=['GET'])
+def data():
     return render_template("json.html")
 
 
