@@ -10,11 +10,12 @@
 # Imports
 
 import pandas as pd
+from os import path
 
 
 # Import Leafly csv
 
-file_name = r"C:\Users\johnj\OneDrive\Documents\Lambda\BuildWeek3\data-science\Med_Cabinet\data\Leafly.csv"
+file_name = path.join(path.dirname(__file__), "../wrangling/Leafly.csv")
 
 df = pd.read_csv(file_name)
 

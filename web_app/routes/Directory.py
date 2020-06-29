@@ -8,7 +8,7 @@ from os import path
 import csv
 import pandas as pd
 from flask import Blueprint, request, render_template
-from web_app.Recommend import recommend
+from web_app.Recommend import recommend2
 
 
 # Make Blueprint for __init__.py
@@ -91,11 +91,19 @@ def predict():
     print("FORM DATA:", dict(request.form))
     
     desired_effects = request.form["desired_effects"]
-    print(desired_effects)
+    #desired_flavors = request.form["desired_flavors"]
+    #desired_description = request.form["desired_description"]    
 
-    results = recommend(desired_effects)
+    results = recommend2(desired_effects)
 
     return render_template("prediction_results.html",
     desired_effects=desired_effects,
-    recommendation= results #[0]
+    #desired_flavors=desired_flavors,
+    #desired_description=desired_description,
+    recommendation_strain=results[0],
+    recommendation_effects=results[1],
+    recommendation_flavor=results[2],
+    recommendation_description=results[3],
+    recommendation_type=results[4],
+    recommendation_rating=results[5]
     )

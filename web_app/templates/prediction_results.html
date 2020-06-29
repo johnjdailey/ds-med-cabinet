@@ -10,7 +10,17 @@
     <p>Your desired effects entered were, "{{ desired_effects }}" and your recommendation is:</p>
     <br>
     <div class="p-3 mb-2 bg-dark text-success bg-dark">
-    <h3>{{ recommendation }}</h3>
+    <h4>Strain: {{ recommendation_strain }}</h4>
+    <br>
+    <h4>Effects: {{ recommendation_effects }}</h4>
+    <br>
+    <h4>Flavors: {{ recommendation_flavor }}</h4>
+    <br>
+    <h4>Description: {{ recommendation_description }}</h4>
+    <br>
+    <h4>Type: {{ recommendation_type }}</h4>
+    <br>
+    <h4>Rating: {{ recommendation_rating }}</h4>
     <br>
     <br>
 {% endblock %}

@@ -76,4 +76,4 @@ def post_predict_put():
 
     else:
 
-        return render_template("predict.html", message = "DS Med Cabinet Recommendation API, using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
+        return render_template("predictAPI.html", message = "DS Med Cabinet Recommendation API, using natural language processing to recommend the best cannabis strains to Med Cabinet members.")
