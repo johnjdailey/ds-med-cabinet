@@ -18,7 +18,6 @@ and then uses the desired effects to predict the best cannabis strain using natu
 
 ```
 MOCK DATA = {"id": 420,
-             "First Name": 'John',
              "Recommendation": "Pineapple-Super-Silver-Haze"}
 ```
 
